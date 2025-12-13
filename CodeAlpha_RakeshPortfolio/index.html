@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="src/card.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
 </head>
@@ -58,7 +58,7 @@
                         <a href="#about" class="nav-link">About</a>
                         <a href="#service" class="nav-link">Services</a>
                         <a href="#projects" class="nav-link">Projects</a>
-                        <!-- <a href="#contact" class="nav-link">Contact</a> -->
+                        <a href="#contact" class="nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -94,11 +94,9 @@
                             applications with clean code and seamless user experiences.
                         </p>
                         <div class="flex justify-center space-x-4 text-sm font-semibold">
-                            <a href="Assets/Rakesh_Resume.pdf" target="_blank" class="glow-button" download>Download
+                            <a href="Assets/RakeshDey_Resume.pdf" target="_blank" class="glow-button" download>Download
                                 Resume</a>
-                            <!-- <a href="https://wa.me/917001584784" target="_blank" class="outline-button">Hire Me</a> -->
-                            <a href="mailto:rakesh.coding.007@gmail.com" class="outline-button">Hire Me</a>
-
+                            <a href="https://wa.me/917001584784" target="_blank" class="outline-button">Hire Me</a>
 
                         </div>
                     </div>
@@ -425,12 +423,70 @@
 
                 <!-- Contact Section -->
 
+                <section class="contact-section w-full max-w-screen-xl mx-auto relative z-[2] ark:bg-zinc-900/40"
+                    style="width: 80%;">
+                    <div
+                        class="glass-morphism rounded-2xl border border-white/10 shadow-2xl p-6 sm:p-8 lg:p-12 animate-fadeIn">
+
+                        <!-- Header -->
+                        <div class="contact-header text-center mb-8 lg:mb-12">
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 lg:mb-4">
+                                Get In Touch
+                            </h2>
+                            <p class="text-base sm:text-lg text-white/70">
+                                Send me a message and I'll get back to you soon!
+                            </p>
+                        </div>
+
+                        <!-- Form -->
+                        <form id="contactForm" class="space-y-6">
+
+                            <!-- Form Container -->
+                            <div class="form-container grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                                <!-- Email Input - Left Side -->
+                                <div class="form-group lg:col-span-1 animate-slideIn">
+                                    <label for="email"
+                                        class="block text-white/90 mb-2 text-sm sm:text-base font-medium">
+                                        Email
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com" required
+                                        class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 border border-white/15 rounded-xl text-white text-sm sm:text-base placeholder:text-white/40 focus:bg-white/10 focus:border-blue-500/60 focus:shadow-lg focus:shadow-blue-500/20 focus:-translate-y-1 transition-all duration-300 outline-none">
+                                </div>
+
+                                <!-- Message Textarea - Right Side -->
+                                <div class="form-group lg:col-span-2 animate-slideIn" style="animation-delay: 0.1s;">
+                                    <label for="message"
+                                        class="block text-white/90 mb-2 text-sm sm:text-base font-medium">
+                                        Message
+                                    </label>
+                                    <textarea id="message" name="message" placeholder="Your message here..." required
+                                        rows="5"
+                                        class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 border border-white/15 rounded-xl text-white text-sm sm:text-base placeholder:text-white/40 focus:bg-white/10 focus:border-blue-500/60 focus:shadow-lg focus:shadow-blue-500/20 focus:-translate-y-1 transition-all duration-300 outline-none resize-y min-h-[120px] sm:min-h-[150px]"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submitBtn"
+                                class="submit-btn w-full py-3 sm:py-4 gradient-btn text-white text-base sm:text-lg font-semibold rounded-xl relative overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/10 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none transition-all duration-300">
+                                Send Message
+                            </button>
+
+                            <!-- Status Message -->
+                            <div id="statusMessage"
+                                class="status-message hidden mt-5 p-4 rounded-xl text-center font-medium text-sm sm:text-base animate-fadeIn">
+                            </div>
+                        </form>
+
+                    </div>
+                </section>
+
 
 
                 <!-- <section> -->
 
 
-                <footer class="bg-white rounded-lg shadow-sm dark:bg-zinc-900/40 m-4 relative z-[2]">
+                <footer class="bg-white rounded-lg shadow-sm dark:bg-zinc-900/40 m-4 relative z-[2]" id="contact">
                     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                         <div class="sm:flex sm:items-center sm:justify-between">
 
@@ -474,23 +530,7 @@
         </div>
     </div>
 
-    <!-- EmailJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script>
-        emailjs.init("A0lgwe96Ezpe7kTI-"); // Replace with your EmailJS public key
 
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            emailjs.sendForm("Contact_RD_70@Service", "Contact_RD_71@Portfolio", this)
-                .then(() => {
-                    alert("Message sent successfully!");
-                    this.reset();
-                }, (error) => {
-                    alert("Failed to send message. Try again later.");
-                    console.error(error);
-                });
-        });
-    </script>
 
     <!-- FontAwesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

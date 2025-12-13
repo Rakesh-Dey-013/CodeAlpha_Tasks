@@ -24,6 +24,7 @@ A modern, responsive personal portfolio website built with HTML, CSS, JavaScript
   - About section
   - Services/Skills section
   - Projects/Portfolio section
+  - Contact section
 
 - **Custom Styling**: Modular CSS architecture for easy maintenance
 - **Fast Loading**: Optimized assets and code for quick page loads
@@ -64,6 +65,7 @@ The website is straightforward to navigate:
 - **About**: Information about skills and experience
 - **Services**: Overview of services offered
 - **Projects**: Showcase of projects and work
+- **Contact**: Contact form using emailjs for direct communication
 
 ## 🎨 Customization
 

@@ -203,3 +203,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+// Initialize EmailJS with your Public Key
+(function () {
+  emailjs.init("x3fQEF69jQLvXcgHY"); // Replace with your EmailJS public key
+})();
+
+const form = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const statusMessage = document.getElementById('statusMessage');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Disable button and show loading state
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  statusMessage.className = 'status-message';
+  statusMessage.style.display = 'none';
+
+  // Get form data
+  const formData = {
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value
+  };
+
+  // Send email using EmailJS
+  emailjs.send('service_ecifuvi', 'template_cgpsv8h', formData)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+
+      // Show success message
+      statusMessage.className = 'status-message success';
+      statusMessage.textContent = '✓ Message sent successfully!';
+
+      // Reset form
+      form.reset();
+
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        statusMessage.style.display = 'none';
+      }, 5000);
+    }, function (error) {
+      console.log('FAILED...', error);
+
+      // Show error message
+      statusMessage.className = 'status-message error';
+      statusMessage.textContent = '✗ Failed to send message. Please try again.';
+
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    });
+});
+
