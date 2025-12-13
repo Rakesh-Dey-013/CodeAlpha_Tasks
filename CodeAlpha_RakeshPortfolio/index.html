@@ -1,0 +1,542 @@
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
+    <title>Rakesh's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/about.css">
+    <link rel="stylesheet" href="src/service.css">
+    <link rel="stylesheet" href="src/card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="bg-[#0a0a0a] text-gray-100">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0a0a0a]">
+        <div class="code-animation mb-4">
+            <span class="text-4xl font-mono font-bold text-gray-100 typing-text"></span>
+        </div>
+        <div class="loading-bar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="opacity-0">
+        <!-- Navbar -->
+        <nav class="fixed top-0 w-full z-40 nav-glass">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <a href="#" class="nav-logo font-mono text-3xl font-bold"
+                        style="font-family: 'Iceland', sans-serif;">
+                        Code<span class="text-blue-600" style="font-family: 'Iceland', sans-serif;">.Nexus</span>
+                    </a>
+
+                    <!-- Enhanced Hamburger Menu -->
+                    <div class="hamburger md:hidden" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link active">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#service" class="nav-link">Services</a>
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <!-- <a href="#contact" class="nav-link">Contact</a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Full Screen Mobile Menu Overlay -->
+        <div class="menu-overlay flex flex-col items-center justify-center text-2xl">
+            <a href="#home" class="mobile-nav-link text-2xl">Home</a>
+            <a href="#about" class="mobile-nav-link text-2xl">About</a>
+            <a href="#service" class="mobile-nav-link text-2xl">Services</a>
+            <a href="#projects" class="mobile-nav-link text-2xl">Projects</a>
+            <!-- <a href="#contact" class="mobile-nav-link">Contact</a> -->
+        </div>
+
+        <!-- Content Container -->
+        <div class="content-container relative">
+            <!-- Particles Background -->
+            <div id="particles-js" class="fixed inset-0"></div>
+
+            <!-- Sections Container -->
+            <div class="sections-container relative">
+                <!-- Home Section -->
+                <section id="home"
+                    class="relative z-[2] min-h-screen flex flex-wrap items-center justify-center py-20 gap-10 w-full">
+                    <div class="text-center">
+                        <h6 class="name text-2xl text-zinc-300 md:text-5xl font-bold mb-6 gradient-text leading-tight">
+                            Hi, I'm Rakesh Kr. Dey
+                        </h6>
+                        <span class="text-xl text-zinc-300 pre_auto-type">I am a</span>
+                        <span class="auto-type text-xl text-blue-600"></span>
+                        <p class="mt-5 text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+                            MERN Stack Developer focused on building fast, interactive, and full-featured web
+                            applications with clean code and seamless user experiences.
+                        </p>
+                        <div class="flex justify-center space-x-4 text-sm font-semibold">
+                            <a href="Assets/Rakesh_Resume.pdf" target="_blank" class="glow-button" download>Download
+                                Resume</a>
+                            <!-- <a href="https://wa.me/917001584784" target="_blank" class="outline-button">Hire Me</a> -->
+                            <a href="mailto:rakesh.coding.007@gmail.com" class="outline-button">Hire Me</a>
+
+
+                        </div>
+                    </div>
+                    <div class="home-img bg-zinc-900/50 m-5"
+                        style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                        <img src="Assets/RD_edit.png" alt="">
+                        <hr>
+
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about" class="relative z-[2] flex items-center justify-center py-10">
+                    <div class="max-w-5xl mx-auto px-4">
+                        <h2 class="text-4xl font-bold mb-8 gradient-text text-center">
+                            About Me
+                        </h2>
+
+                        <div class="relative z-[2] about-glass-container">
+                            <div class="about-glass-card flex flex-wrap items-center justify-center">
+                                <img src="Assets/About.jpg" alt="Profile photo" class="about-profile-img" />
+                                <div class="about-info">
+                                    <h2>Rakesh Kr. Dey</h2>
+                                    <p>
+                                        Hello! I'm a passionate MERN Stack Developer skilled in MongoDB, Express, React,
+                                        Node.js, API integration, Tailwind CSS, JavaScript, HTML, and Python. I’m
+                                        constantly improving my knowledge of full-stack development and Data Structures
+                                        & Algorithms to enhance my problem-solving skills. I enjoy building responsive,
+                                        user-focused web applications, exploring new technologies, and collaborating on
+                                        impactful projects.
+                                    </p>
+                                    <div class="icons">
+                                        <a href="https://github.com/Rakesh-Dey-013" target="_blank" title="GitHub">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/rakeshdey007/" target="_blank"
+                                            title="LinkedIn">
+                                            <i class="fa-brands fa-linkedin"></i>
+                                        </a>
+                                        <a href="https://codepen.io/CodeNexus_RD" target="_blank" title="CodePen">
+                                            <i class="fa-brands fa-codepen"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/rakesh._._007" target="_blank"
+                                            title="Instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        <a href="https://x.com/RD_Gaming796974" target="_blank" title="X (Twitter)">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="glass-card relative z-[2] max-w-3xl mx-auto">
+                            <p class="text-gray-300 mb-6">
+                                Passionate developer with expertise in building scalable web
+                                applications and creating innovative solutions.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="skill-card glass-card">
+                                    <h3 class="text-xl font-bold mb-4">Frontend</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-pill">Figma</span>
+                                        <span class="tech-pill">HTML</span>
+                                        <span class="tech-pill">CSS</span>
+                                        <span class="tech-pill">JavaScript</span>
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">GSAP</span>
+                                    </div>
+                                </div>
+                                <div class="skill-card glass-card">
+                                    <h3 class="text-xl font-bold mb-4">Backend</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-pill">Node.js</span>
+                                        <span class="tech-pill">Express.js</span>
+                                        <!-- <span class="tech-pill">Next.js</span> -->
+                                        <span class="tech-pill">MongoDB</span>
+                                        <span class="tech-pill">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--  ************************************
+                  ****************************
+                  ************************* -->
+
+                <section id="service" class="c-section relative z-[2] mt-5">
+                    <h2 class="c-section__title"><span
+                            class="text-4xl font-bold gradient-text text-center">Services</span></h2>
+                    <ul class="c-services">
+
+                        <li class="c-services__item">
+                            <h3>Coding Problem Solver</h3>
+                            <p>Solve complex coding problems and offer optimized algorithmic solutions.</p>
+                        </li>
+                        <li class="c-services__item">
+                            <h3>Frontend Developer</h3>
+                            <p>Build responsive, fast, and modern websites using HTML, CSS, and JavaScript.</p>
+                        </li>
+                        <li class="c-services__item">
+                            <h3>React + Express</h3>
+                            <p>Create powerful full-stack web applications with React and Express, delivering fast,
+                                responsive, and user-friendly experiences.</p>
+                        </li>
+                        <li class="c-services__item">
+                            <h3>Backend Developer</h3>
+                            <p>Create secure, scalable, and robust backends with modern server-side technologies.</p>
+                        </li>
+                        <li class="c-services__item">
+                            <h3>Python Developer</h3>
+                            <p>Build Python-based applications, APIs, and automation scripts tailored to your needs.
+                            </p>
+                        </li>
+
+                        <li class="c-services__item">
+                            <h3>UI/UX Designer</h3>
+                            <p>Create user-centered, visually engaging, and intuitive designs for web and mobile
+                                apps.</p>
+                        </li>
+                        <li class="c-services__item">
+                            <h3>AI based App</h3>
+                            <p>Design and develop AI-driven applications to automate processes and enhance user
+                                experiences.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="relative z-[2] min-h-screen flex items-center justify-center py-20">
+                    <div class="max-w-6xl mx-auto px-4">
+                        <h2 class="text-4xl font-bold mb-12 gradient-text text-center">
+                            Featured Projects
+                        </h2>
+
+
+                        <div class="project-card-container grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/learnify.png" alt="NFT" />
+                                    <h2 class="card-title">Learnify</h2>
+                                    <p class='description'>Your Personalized Learning Dashboard for mastering new skills
+                                        with curated resources. <br><br> React + Tailwind + API - Gemini, YT</p>
+                                    <i class="fa-solid fa-share"></i>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://learnify-beige.vercel.app/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+                                    <!-- <i class="fa-solid fa-share" style="color: #63E6BE;"></i> -->
+
+
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/qrcode.png" alt="NFT" />
+                                    <h2 class="card-title">QR Code Designer</h2>
+                                    <p class='description'>A web-based QR code generator built for flexibility and
+                                        design freedom. <br><br> React + Tailwind</p>
+                                    <i class="fa-solid fa-share"></i>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://rakesh-dey-013.github.io/QR-Code_Designer/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/converter.png" alt="NFT" />
+                                    <h2 class="card-title">File Format Converter</h2>
+                                    <p class='description'> Quickly convert files across multiple formats with an
+                                        intuitive, responsive interface. <br><br> React + Tailwind + File Management</p>
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://format-converter-three.vercel.app/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/to-do.png" alt="NFT" />
+                                    <h2 class="card-title">Task Tracker</h2>
+                                    <p class='description'>
+                                        Stay organized & boost productivity by tracking tasks with ease in a simple,
+                                        user-friendly interface. <br><br> React + Tailwind + LocalStorage
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://task-tracker-beta-bice.vercel.app/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/weather.png" alt="NFT" />
+                                    <h2 class="card-title">Weather Dashboard</h2>
+                                    <p class='description'>
+                                        Get real-time weather updates and forecasts in a clean, easy-to-use interface.
+                                        <br><br> React + Tailwind + Weather API
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://rakesh-dey-013.github.io/Weather-Dashboard/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/RaftarX.png" alt="NFT" />
+                                    <h2 class="card-title">RafterX – Premium Cars</h2>
+                                    <p class='description'>
+                                        A sleek, responsive website to showcase premium cars with profiles, galleries,
+                                        and easy inquiries. <br><br> HTML + CSS + JavaScript
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://rd-codenexus-car-website.netlify.app/" target="_blank">
+                                            <button class="preview-button">Preview</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/epikmart.png" alt="NFT" />
+                                    <h2 class="card-title">EpicMart - Online Store</h2>
+                                    <p class='description'>
+                                        A modern, responsive e-commerce website with product pages, secure checkout,
+                                        user-friendly and
+                                        smooth shopping. <br><br> HTML + CSS + JavaScript
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://epicmart.netlify.app/" target="_blank">
+                                            <button class="preview-button">Preview
+                                        </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/HeadPhone.png" alt="NFT" />
+                                    <h2 class="card-title">Premium Headphones</h2>
+                                    <p class='description'>
+                                        A modern, responsive website for premium headphones with product displays,
+                                        specs, reviews, and smooth checkout. <br><br> HTML + CSS + JavaScript
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://rd-codenexus-headphone-website.netlify.app/" target="_blank">
+                                            <button class="preview-button">Preview
+                                        </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nft" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1800">
+                                <div class='main'>
+                                    <img class='tokenImage' src="Assets/sir_tata.png" alt="NFT" />
+                                    <h2 class="card-title">A Tribute Website</h2>
+                                    <p class='description'>
+                                        A tribute website honoring Sir Ratan Tata, highlighting his inspiring life,
+                                        remarkable
+                                        achievements, and legacy. <br><br> HTML + CSS + JavaScript
+                                    </p>
+
+                                    <hr />
+                                    <div class="preview-button-div">
+                                        <a href="https://rd-journeyofratantata.netlify.app/" target="_blank">
+                                            <button class="preview-button">Preview
+                                        </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+
+
+
+                <!-- <section> -->
+
+
+                <footer class="bg-white rounded-lg shadow-sm dark:bg-zinc-900/40 m-4 relative z-[2]">
+                    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                        <div class="sm:flex sm:items-center sm:justify-between">
+
+                            <span style="font-family: 'Iceland', sans-serif;"
+                                class="self-center text-3xl font-semibold whitespace-nowrap dark:text-zinc-500">Code<span
+                                    style="font-family: 'Iceland', sans-serif;"
+                                    class="text-blue-700">.Nexus</span></span>
+
+                            <ul
+                                class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                                <li>
+                                    <a href="#home" class="hover:text-blue-700 me-4 md:me-6">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#about" class="hover:text-blue-700 me-4 md:me-6">About</a>
+                                </li>
+                                <li>
+                                    <a href="#service" class="hover:text-blue-700 me-4 md:me-6">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#projects" class="hover:text-blue-700 me-4 md:me-6">Projects</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#contact" class="hover:text-blue-700">Contact</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#"
+                                class="hover:underline">Code.Nexus</a>. All Rights
+                            Reserved.</span>
+                    </div>
+                </footer>
+
+
+                <!-- </section> -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        emailjs.init("A0lgwe96Ezpe7kTI-"); // Replace with your EmailJS public key
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            emailjs.sendForm("Contact_RD_70@Service", "Contact_RD_71@Portfolio", this)
+                .then(() => {
+                    alert("Message sent successfully!");
+                    this.reset();
+                }, (error) => {
+                    alert("Failed to send message. Try again later.");
+                    console.error(error);
+                });
+        });
+    </script>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile Menu Functionality
+        const hamburger = document.getElementById("hamburger");
+        const menuOverlay = document.querySelector(".menu-overlay");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            menuOverlay.classList.toggle("active");
+            document.body.style.overflow = menuOverlay.classList.contains("active") ?
+                "hidden" :
+                "";
+        });
+        // Close menu when clicking nav links
+        mobileNavLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                menuOverlay.classList.remove("active");
+                document.body.style.overflow = "";
+            });
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["MERN Stack Developer", "Frontend Developer", "Backend Developer"],
+            typeSpeed: 150,
+            backSpeed: 100,
+            loop: true
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>
