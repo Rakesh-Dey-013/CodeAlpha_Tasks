@@ -1,4 +1,4 @@
-# 🌟 Personal Portfolio Website
+# 🌟 Personal Portfolio Website 🧑‍💻
 
 A modern, responsive personal portfolio website built with HTML, CSS, JavaScript, and Particle.js, featuring smooth animations and an elegant design.
 
@@ -96,7 +96,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Rakesh Dey**
 
 - Portfolio: [https://rakesh-dey-portfolio.netlify.app/](https://rakesh-dey-portfolio.netlify.app/)
-- GitHub: [@RakeshDey](https://github.com/yourusername)
+- GitHub: [@RakeshDey](https://github.com/Rakesh-Dey-013)
 
 ## 🙏 Acknowledgments
 
