@@ -140,25 +140,14 @@ The portfolio website is additionally deployed on Netlify for enhanced performan
 
 Through this internship, I gained experience in:
 
-- Building responsive web applications from scratch
-- Implementing smooth CSS animations and transitions
-- JavaScript DOM manipulation and event handling
-- Working with external libraries (Particle.js)
-- Version control with Git and GitHub
-- Deploying web applications
-- Writing clean, maintainable code
-- UI/UX design principles
-
-## 🔮 Future Enhancements
-
-Potential improvements for these projects:
-
-- [ ] Add dark theme
-- [ ] Implement progressive web app (PWA) features
-- [ ] Add more advanced calculator functions (scientific mode)
-- [ ] Add project search and filter functionality
-- [ ] Implement lazy loading for images
-- [ ] Add accessibility features (ARIA labels, keyboard navigation)
+- [ ] Building responsive web applications from scratch
+- [ ] Implementing smooth CSS animations and transitions
+- [ ] JavaScript DOM manipulation and event handling
+- [ ] Working with external libraries (Particle.js)
+- [ ] Version control with Git and GitHub
+- [ ] Deploying web applications
+- [ ] Writing clean, maintainable code
+- [ ] UI/UX design principles
 
 ## 📝 License
 
