@@ -1,3 +1,4 @@
+
 const input = document.getElementById("calcDisplay");
 const buttons = document.querySelectorAll("button");
 let string = "";
@@ -24,12 +25,14 @@ Array.from(buttons).forEach((button) => {
     });
 });
 
-// Handle keyboard input
-input.addEventListener("keydown", (e) => {
+// Handle keyboard input on document level
+document.addEventListener("keydown", (e) => {
     const key = e.key;
 
-    // Prevent all default behavior
-    e.preventDefault();
+    // Prevent default for calculator keys
+    if (/^[0-9+\-*/.()=%]$/.test(key) || ["Enter", "Backspace", "Delete", "Escape"].includes(key) || key.toLowerCase() === "c") {
+        e.preventDefault();
+    }
 
     // Handle special keys
     if (key === "Enter" || key === "=") {
@@ -57,14 +60,11 @@ input.addEventListener("paste", (e) => {
     }
 });
 
-// Prevent direct text input (typing letters)
-input.addEventListener("input", (e) => {
-    const cleaned = input.value.replace(/[^0-9+\-*/.()]/g, "");
-    if (input.value !== cleaned) {
-        input.value = cleaned;
-        string = cleaned;
-    }
-});
+// Prevent direct text input (typing letters) - make input readonly via attribute
+input.setAttribute('readonly', 'readonly');
+
+// But allow focus for keyboard events
+input.style.caretColor = 'transparent';
 
 function insertValue(text) {
     if (input.value === "0" || input.value === "Error") {
@@ -73,6 +73,7 @@ function insertValue(text) {
         string = string + text;
     }
     input.value = string;
+    input.focus();
 }
 
 function calculateResult() {
