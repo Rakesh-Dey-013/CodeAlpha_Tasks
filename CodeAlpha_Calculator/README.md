@@ -14,7 +14,7 @@ A beautiful, modern calculator with a sleek dark theme and glassmorphism design.
 
 ---
 
-### 🚀 Live Demo : https://rakesh-dey-013.github.io/CodeAlpha_Tasks/CodeAlpha_Calculator/
+### 🚀 Live Demo : https://rakesh-dey-013.github.io/codealpha_tasks/CodeAlpha_Calculator/
 
 <!-- **[View Live Calculator](https://rakesh-dey-013.github.io/CodeAlpha_Tasks/CodeAlpha_Calculator/)** -->
 

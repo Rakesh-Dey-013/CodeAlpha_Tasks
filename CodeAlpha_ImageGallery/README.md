@@ -5,7 +5,7 @@ This project showcases a clean layout where images are displayed in a grid, and 
 
 ---
 
-### 🚀 Live Demo : https://rakesh-dey-013.github.io/CodeAlpha_Tasks/CodeAlpha_ImageGallery/
+### 🚀 Live Demo : https://rakesh-dey-013.github.io/codealpha_tasks/CodeAlpha_ImageGallery/
 
 ---
 
