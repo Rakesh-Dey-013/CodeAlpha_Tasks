@@ -11,6 +11,7 @@ A beautiful, modern calculator with a sleek dark theme and glassmorphism design.
 - **Error Handling** - Gracefully handles invalid expressions
 - **Responsive Design** - Works seamlessly on desktop and mobile devices
 - **Intuitive Interface** - Clean, easy-to-use button layout
+- **Keyboard Support** - Use keyboard for input alongside button clicks
 
 ---
 
